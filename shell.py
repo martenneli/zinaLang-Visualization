@@ -1,5 +1,8 @@
-from basic import handel
+from baisc import handel
 
 while True:
   text = input('zena > ')
-  print(text)
+  result, error = handel.run(text)
+
+  if error: print(error.as_string())
+  else: print(result)
